@@ -3,8 +3,8 @@
     color: #fff;
     background-color: #eee;
     height: 400px;
-    background: -webkit-linear-gradient(rgb(165, 165, 165),rgba(255, 255, 255, 0));
-    background: linear-gradient(rgb(165, 165, 165), rgba(255, 255, 255, 0));
+    background: -webkit-linear-gradient(rgb(114, 114, 114),rgba(255, 255, 255, 0));
+    background: linear-gradient(rgb(114, 114, 114), rgba(255, 255, 255, 0));
     background-size: cover;
 }
 .naslovna hr {
