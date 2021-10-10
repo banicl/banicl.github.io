@@ -56,6 +56,17 @@
     }
 }
 
+
+.profpic{
+    opacity: 0.6;
+    transition: 0.3s;
+    height:100%; 
+    width:100%
+}
+.profpic:hover{
+    opacity: 1;
+}
+
 .section {
     font-size: 56px;
     text-align: center;
@@ -77,8 +88,36 @@
     color:black;
 }
 
+.digvjestinebold0:hover {
+    background-color: #eee;
+    color:rgb(165, 165, 165);
+    padding: 10px;
+    transition: 0.3s;
+}
+.digvjestinebold0 {
+    background-color: rgb(165, 165, 165);
+    color:#eee;
+    padding: 10px;
+}
+
 .digvjestinebold {
     background-color: #eee;
     color:rgb(165, 165, 165);
+    padding: 10px;
+    transition: 0.3s;
+}
+.digvjestinebold:hover {
+    background-color: rgb(165, 165, 165);
+    color:#eee;
+    padding: 10px;
+}
+
+.digvjestinebold2:hover {
+    background-color: rgb(165, 165, 165);
+    padding: 10px;
+    transition: 0.3s;
+}
+.digvjestinebold2 {
+    background-color: #eee;
     padding: 10px;
 }
