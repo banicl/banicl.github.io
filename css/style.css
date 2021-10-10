@@ -2,9 +2,9 @@
     padding: 30px;
     color: #fff;
     background-color: #eee;
-    height: 700px;
-    background: -webkit-linear-gradient(rgb(88, 29, 81),rgb(155, 68, 143)rgba(255, 255, 255, 0));
-    background: linear-gradient(rgb(88, 29, 81), rgb(155, 68, 143), rgba(255, 255, 255, 0));
+    height: 400px;
+    background: -webkit-linear-gradient(rgb(165, 165, 165),rgba(255, 255, 255, 0));
+    background: linear-gradient(rgb(165, 165, 165), rgba(255, 255, 255, 0));
     background-size: cover;
 }
 .naslovna hr {
@@ -62,7 +62,17 @@
     margin-top: 35px;
     letter-spacing: 3px;
     font-weight: 500;
-    color: rgb(155, 68, 143);
+    color: rgb(165, 165, 165);
     text-transform: capitalize;
 }
 
+.container2 {
+    font-size: 15px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: rgb(165, 165, 165);
+    color:black;
+}
