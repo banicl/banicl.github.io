@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -14,18 +15,20 @@
 
 <body>
     <div class="page-wrap">
-
-        <div class="naslovna">
+        <div class="naslovna" id="vrh">
             <div class="container">
                 <h1>Leonarda Banić</h1>
                 <div class="spacer"></div>
                 <div class="spacer"></div>
                 <hr>
                 <hr>
-                <h2 class="text-center">Fakultet informatike u Puli</h2>
+                <h3 class="text-center"><a class="active link" href="#omeni">O MENI</a>&nbsp; <a class="link"
+                        href="#digvjestine">DIGITALNE VJEŠTINE</a>&nbsp; <a class="link" href="#jezvjestine">JEZIČNE
+                        VJEŠTINE</a>&nbsp; <a class="link" href="#galerija">GALERIJA</a>&nbsp; <a class="link"
+                        href="#kontakt">KONTAKT</a></h3>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="omeni">
             <div class="row">
                 <div class="col-md-4">
                     <div class="well">
@@ -51,11 +54,11 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="digvjestine">
             <div style="background-color:rgb(165, 165, 165);color:white;text-align: center; letter-spacing: 1px;"
                 class="row well">
                 <div style="text-align:center;width:100%;">
-                    <h2><b>DIGITALNE VJEŠTINE</b></h3>
+                    <h2 style="letter-spacing: 3px;">DIGITALNE VJEŠTINE</h3>
                         <hr>
                 </div>
                 <div class="col-md-3 digvjestinebold0">
@@ -72,12 +75,12 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" id="jezvjestine">
             <div class="row">
                 <div class="col-md-12"
                     style="background-color:#eee;text-align: center; letter-spacing: 1px; padding-bottom:10px;">
                     <div style="text-align:center;width:100%;">
-                        <h2><b>JEZIČNE VJEŠTINE</b></h3>
+                        <h2 style="letter-spacing: 3px;">JEZIČNE VJEŠTINE</h3>
                             <hr style="border-top: 1px solid">
                     </div>
                     <div>
@@ -97,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <div class="container" style="margin-top: 20px;">
+        <div class="container" style="margin-top: 20px;" id="galerija">
             <div class="row">
                 <div class="col-md-3 well ">
                     <a href="imgs/conimg1.jpg" target="_blank"><img src="imgs/conimg1.jpg"
@@ -117,50 +120,57 @@
                 </div>
             </div>
         </div>
-        <div class="container" style="margin-top: 20px;">
+        <div class="container" style="margin-top:5px;margin-bottom:20px;" id="kontakt">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <h3>POŠALJITE MI PORUKU!</h3><br>
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 kontaktforma">
+                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>POŠALJITE MI PORUKU!</b></h3><br>
                     <div class="spacer"></div>
                     <form class="form-horizontal" role="form" id="form" method="post">
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Ime</label>
-                            <div class="col-sm-10">
+                            <label for="name" class="col-sm-2 control-label">Ime:</label>
+                            <div class="col-sm-6">
                                 <input type="text" class="contact form-control" name="ime" id="ime" placeholder="Ime">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-10">
+                            <label for="email" class="col-sm-2 control-label" ">Email:</label>
+                            <div class=" col-sm-6">
                                 <input type="email" class="contact form-control" name="email" id="email"
                                     placeholder="Email">
-                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message" class="col-sm-2 control-label">Poruka</label>
-                            <div class="col-sm-10">
-                                <textarea class="contact form-control" rows="3" name="poruka" id="poruka"
-                                    placeholder="Napiši nešto lijepo :)"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <input type="submit" value="Pošalji" class="btn btn-default" name="submit">
-                            </div>
-                        </div>
-                    </form>
                 </div>
-                <!--/.col-->
-                <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-                    <h3 style="margin-bottom: 20px;">KONTAKT</h3>
-                    <div class="spacer"></div>
-                    <p class="lead"><i class="fa fa-map-marker"></i>Varaždin, Hrvatska
-                    </p>
-                    <p class="lead"><i class="fa fa-phone"></i>099 / 420 4345</p>
-                    <p class="lead"><i class="fa fa-envelope"></i>banic.leonarda2@gmail.com</p>
+                <div class="form-group">
+                    <label for="message" class="col-sm-2 control-label">Poruka:</label>
+                    <div class="col-sm-6">
+                        <textarea class="contact form-control" rows="3" name="poruka" id="poruka"
+                            placeholder="Napiši nešto lijepo :)" style="align-items: left;"></textarea>
+                    </div>
                 </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="submit" value="Pošalji" class="btn btn-default" name="submit">
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 kontaktforma">
+                <h3 style="margin-bottom: 20px;"><b>KONTAKT</b></h3>
+                <div class="spacer"></div><br><br>
+                <p class="lead"><i class="fa fa-map-marker"></i> Varaždin, Hrvatska
+                </p>
+                <p class="lead"><i class="fa fa-phone"></i> 099 / 420 4345</p>
+                <p class="lead"><i class="fa fa-envelope"></i> banic.leonarda2@gmail.com</p><br><br><br>
             </div>
         </div>
+    </div>
+    <div class="podnozje">
+        <p>Copyright © Leonarda Banić 2021<br>
+            lbanic@unipu.hr
+        </p>
+    </div>
+    <div class="dno">
+        <p><i class="fa fa-angle-up"></i><a href="#vrh"> Vrati se na vrh <i class="fa fa-angle-up"></i></a></p>
+    </div>
     </div>
 </body>
 

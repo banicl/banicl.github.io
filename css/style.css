@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
 .naslovna {
     padding: 30px;
     color: #fff;
@@ -59,7 +64,7 @@
 
 .profpic{
     opacity: 0.6;
-    transition: 0.3s;
+    transition: 0.5s;
     height:100%; 
     width:100%
 }
@@ -92,7 +97,7 @@
     background-color: #eee;
     color:rgb(165, 165, 165);
     padding: 10px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .digvjestinebold0 {
     background-color: rgb(165, 165, 165);
@@ -104,7 +109,7 @@
     background-color: #eee;
     color:rgb(165, 165, 165);
     padding: 10px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .digvjestinebold:hover {
     background-color: rgb(165, 165, 165);
@@ -120,4 +125,52 @@
 .digvjestinebold2 {
     background-color: #eee;
     padding: 10px;
+}
+
+.link{
+    transition: 0.5s;
+    color:white;
+}
+.link:hover{
+    color:rgb(109, 109, 109);
+    text-decoration: none;
+}
+.active
+{
+    color:rgb(109, 109, 109);
+}
+.podnozje{
+    font-size: 17px;
+    text-align: center;
+    margin: 0 auto;
+    padding:20px;
+    letter-spacing: 3px;
+    background-color:rgb(114, 114, 114);
+    color: white;
+}
+
+.dno{
+    font-size: 17px;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    background-color:white;
+    color: black;
+}
+.dno a{
+    color: black;
+    text-decoration: wavy;
+}
+
+.kontaktforma{
+  
+    background-color: #eee;
+    color:rgb(165, 165, 165);
+    padding: 10px;
+    transition: 0.5s;
+    text-align:left;
+}
+.kontaktforma:hover{
+    color:black;
 }
