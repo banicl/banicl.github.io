@@ -30,6 +30,17 @@
             });
         }
     </script>
+    <script type='text/javascript'>
+        function potvrdi() {
+            var user_choice = window.confirm('Potvrdite slanje Vaše poruke: ');
+
+            if (user_choice == true) {
+                alert("Poruka je uspješno poslana! :)");
+            } else {
+                alert("Slanje poruke nije uspjelo. :(");
+            }
+        }
+    </script>
     <title>Leonarda Banić</title>
 </head>
 
@@ -171,7 +182,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <input type="submit" value="Pošalji" class="btn btn-default" name="submit"
-                                    onclick="return confirm('Potvrdite slanje Vaše poruke: ')">
+                                    onclick="potvrdi()">
                             </div>
                         </div>
                     </form>
