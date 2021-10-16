@@ -11,36 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init('user_Ecz4etxTjAkPQYl0F5tnK');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-    <script type='text/javascript'>
-        function potvrdi() {
-            var user_choice = window.confirm('Potvrdite slanje Vaše poruke: ');
-
-            if (user_choice == true) {
-                alert("Poruka je uspješno poslana! :)");
-            } else {
-                alert("Slanje poruke nije uspjelo. :(");
-            }
-        }
-    </script>
+    <script type="text/javascript" src="js/functions.js"></script>
     <title>Leonarda Banić</title>
 </head>
 
