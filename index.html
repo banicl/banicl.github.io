@@ -10,6 +10,27 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Ecz4etxTjAkPQYl0F5tnK');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <title>Leonarda Banić</title>
 </head>
 
@@ -125,52 +146,54 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 kontaktforma">
                     <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>POŠALJITE MI PORUKU!</b></h3><br>
                     <div class="spacer"></div>
-                    <form class="form-horizontal" role="form" id="form" method="post">
+                    <form class="form-horizontal" id="contact-form">
+                        <input type="hidden" name="contact_number">
                         <div class="form-group">
-                            <label for="name" class="col-sm-2 control-label">Ime:</label>
+                            <label for="user_name" class="col-sm-2 control-label">Ime:</label>
                             <div class="col-sm-6">
-                                <input type="text" class="contact form-control" name="ime" id="ime" placeholder="Ime">
+                                <input type="text" class="contact form-control" name="user_name" id="user_name"
+                                    placeholder="Ime">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-2 control-label" ">Email:</label>
+                            <label for="email" class="col-sm-2 control-label">Email:</label>
                             <div class=" col-sm-6">
-                                <input type="email" class="contact form-control" name="email" id="email"
+                                <input type="email" class="contact form-control" name="user_email" id="user_email"
                                     placeholder="Email">
+                            </div>
                         </div>
+                        <div class="form-group">
+                            <label for="message" class="col-sm-2 control-label">Poruka:</label>
+                            <div class="col-sm-6">
+                                <textarea class="contact form-control" rows="3" name="message" id="message"
+                                    placeholder="Napiši nešto lijepo :)" style="align-items: left;"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <input type="submit" value="Pošalji" class="btn btn-default" name="submit">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="message" class="col-sm-2 control-label">Poruka:</label>
-                    <div class="col-sm-6">
-                        <textarea class="contact form-control" rows="3" name="poruka" id="poruka"
-                            placeholder="Napiši nešto lijepo :)" style="align-items: left;"></textarea>
-                    </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 kontaktforma">
+                    <h3 style="margin-bottom: 20px;"><b>KONTAKT</b></h3>
+                    <div class="spacer"></div><br><br>
+                    <p class="lead"><i class="fa fa-map-marker"></i> Varaždin, Hrvatska
+                    </p>
+                    <p class="lead"><i class="fa fa-phone"></i> 099 / 420 4345</p>
+                    <p class="lead"><i class="fa fa-envelope"></i> banic.leonarda2@gmail.com</p><br><br><br>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" value="Pošalji" class="btn btn-default" name="submit">
-                    </div>
-                </div>
-                </form>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 kontaktforma">
-                <h3 style="margin-bottom: 20px;"><b>KONTAKT</b></h3>
-                <div class="spacer"></div><br><br>
-                <p class="lead"><i class="fa fa-map-marker"></i> Varaždin, Hrvatska
-                </p>
-                <p class="lead"><i class="fa fa-phone"></i> 099 / 420 4345</p>
-                <p class="lead"><i class="fa fa-envelope"></i> banic.leonarda2@gmail.com</p><br><br><br>
             </div>
         </div>
-    </div>
-    <div class="podnozje">
-        <p>Copyright © Leonarda Banić 2021<br>
-            lbanic@unipu.hr
-        </p>
-    </div>
-    <div class="dno">
-        <p><i class="fa fa-angle-up"></i><a href="#vrh"> Vrati se na vrh <i class="fa fa-angle-up"></i></a></p>
-    </div>
+        <div class="podnozje">
+            <p>Copyright © Leonarda Banić 2021<br>
+                lbanic@unipu.hr
+            </p>
+        </div>
+        <div class="dno">
+            <p><i class="fa fa-angle-up"></i><a href="#vrh"> Vrati se na vrh <i class="fa fa-angle-up"></i></a></p>
+        </div>
     </div>
 </body>
 
